@@ -21,7 +21,7 @@ def get_db():
     if 'db' not in g:
         g.db = Session()
 
-    return Session()
+    return g.db
 
 def close_db(e=None):
     db = g.pop('db', None)
